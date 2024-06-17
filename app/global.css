@@ -1,0 +1,412 @@
+:root {
+  --blue: #56BDE6;
+  --dark-grey: #686868;
+  --grey: #E6E6E6;
+  --orange: #F37320;
+}
+
+* {
+  font-family: var(--roboto-regular);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: white;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.614);
+  width: 100%;
+}
+header img {
+  margin-left: 1rem;
+}
+header nav {
+  width: 100%;
+}
+header nav ul {
+  display: flex;
+  min-height: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+header nav ul li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+header nav ul li a#selected,
+header nav ul li a:hover,
+div.banner section div p.orangeText,
+form small {
+  color: var(--orange);
+}
+
+/* BANNER */
+
+div.banner {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  width: 100%;
+}
+div.banner section.mexicoBanner,
+div.banner section.usaBanner {
+  background-position: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+div.banner section.mexicoBanner {
+  background-image: url('../assets/images/place_mexico_city.jpg');
+}
+div.banner section.usaBanner {
+  background-image: url('../assets/images/place_washington.jpg');
+}
+div.banner section h2 {
+  color: white;
+  font-size: 3rem;
+}
+div.banner section div {
+  background-color: white;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.banner section div div p.boldText {
+  font-family: var(--roboto-bold);
+}
+
+/* CONTACT */
+
+section.callToActionContact {
+  background-color: var(--orange);
+  min-height: 25vh;
+  padding-bottom: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+section.callToActionContact div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  width: 80%;
+  text-align: center;
+}
+section.callToActionContact div h2 {
+  font-size: 2rem;
+}
+div.formContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
+  width: 90%;
+  gap: 0.5rem;
+}
+form p {
+  color: white;
+  font-family: var(--montserrat-bold);
+  background-color: var(--orange);
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form small {
+  width: 100%;
+  padding-left: 2.5rem;
+}
+form div {
+  display: flex;
+  gap: .5rem;
+  width: 100%;
+}
+form div.labelContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+form div input {
+  width: 48%;
+  height: 2.5rem;
+}
+
+form div.textareContainer {
+  display: flex;
+  flex-direction: column;
+}
+form textarea {
+  resize: none;
+  height: 15rem;
+}
+form input.btnSend {
+  background-color: var(--orange);
+  font-size: 1rem;
+  font-family: var(--roboto-bold);
+  color: white;
+  padding: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: none;
+}
+
+/* ALERT */
+
+div.alert-error,
+div.alert-ok {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: var(--roboto-bold);
+  text-transform: uppercase;
+  width: 80%;
+  text-align: center;
+  color: white;
+}
+div.alert-error {
+  background-color: #C41E3A;
+}
+div.alert-ok {
+  background-color: #1FC21E;
+}
+
+/* FACILITIES */
+div.facilitiesContainer {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+div.facilitiesContainer div.selectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  gap: 0.5rem;
+  font-size: large;
+}
+
+div.selectContainer p span, 
+div.selectContainer select {
+  font-family: var(--roboto-bold);
+}
+div.selectContainer select {
+  font-size: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-color: var(--dark-grey);
+}
+
+/* PLACE */
+
+div.placeItemR,
+div.placeItemL {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 200px;
+  max-height: 120px;
+}
+div.placeItemR h3,
+div.placeItemL h3 {
+  font-size: 1.5rem;
+}
+
+div.placeItemR small,
+div.placeItemL small {
+  font-family: var(--roboto-thin);
+  font-size: 1rem;
+}
+div.placeItemR {
+  align-items: end;
+  text-align: end;
+}
+div.placeItemL {
+  align-items: start;
+}
+div.titlePlace {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+  align-items: center;
+}
+div.titlePlace span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  border-radius: 100%;
+  height: 2rem;
+  width: 2rem;
+}
+div.placesContainer div p.cityTitle {
+  font-size: var(--montserrat-regular);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+div.placesContainer div p.mexico {
+  text-align: end;
+}
+div.placesContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+div.placeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+div.verticalLine {
+    border-left: 1px solid var(--grey);
+    height: auto;
+    margin: 0 10px; 
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--grey);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: var(--dark-grey);
+  gap: 2rem;
+}
+
+footer div.copyContainer,
+footer div.locationAndSocials {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+footer div.copyContainer nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+footer div.copyContainer nav ul a{
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+footer div.locations {
+  display: flex;
+  flex-direction: row;
+}
+
+section div.titleLocation {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+div.verticaline {
+  border-left: 1px solid var(--dark-grey);
+  height: auto;
+  margin: 0 10px; 
+}
+
+div.socialsAndTerms {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+div.termsAndPrivacy {
+  display: flex;
+  gap: 0.5rem;
+}
+div.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+div.socials span {
+  background-color: var(--dark-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+}
+
+@media (max-width: 480px) {
+  footer div.copyContainer,
+  footer div.locationAndSocials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  div.banner section.mexicoBanner,
+  div.banner section.usaBanner {
+    max-width: 50%;
+  }
+  div.banner section.mexicoBanner {
+    background-position: 70%;
+  }
+  form {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1023px) {
+  header nav {
+    width: 40%;
+  }
+  form, 
+  div.alert-error,
+  div.alert-ok {
+    width: 40%;
+  }
+}
