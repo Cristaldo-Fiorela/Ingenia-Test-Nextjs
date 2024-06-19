@@ -1,4 +1,3 @@
-// pages/api/proxy.js
 import axios from 'axios';
 
 export default async function handler(req, res) {
@@ -7,7 +6,6 @@ export default async function handler(req, res) {
       const response = await axios.post('https://api.externalsite.com/endpoint', req.body, {
         headers: {
           'Content-Type': 'application/json',
-          // Añade cualquier encabezado adicional necesario
         },
       });
 
